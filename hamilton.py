@@ -5,7 +5,7 @@ def find_hamilton_cycle(graph: Dict[int, Set[int]]) -> Optional[List[int]]:
     path = []
 
     def dfs(v, visited):
-        path.append(n)
+        path.append(v)
         if len(path) == n:
             if path[0] in graph[v]:
                 path.append(path[0])

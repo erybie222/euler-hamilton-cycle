@@ -11,7 +11,7 @@ def measure_time(func, *args):
     return result
 
 def run_experiments(density: float):
-    ns = list(range(6, 36, 2))
+    ns = list(range(100, 1500, 100))
     times_euler = []
     times_hamilton = []
 
