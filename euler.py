@@ -1,4 +1,4 @@
-def find_euler_cycle(graph: dict[int , set(int)]) -> list[int]:
+def find_euler_cycle(graph: dict[int , Set[int]]) -> list[int]:
     g = {u: set(neigh) for u, neigh in graph.items()}
 
     stack = []
