@@ -1,18 +1,18 @@
 from typing import Set
 
-def find_euler_cycle(graph: dict[int , Set[int]]) -> list[int]:
-    g = {u: set(neigh) for u, neigh in graph.items()}
+def find_euler_cycle(graph: dict[int , list[int]]) -> list[int]:
+    g = {u: list(neigh) for u, neigh in graph.items()}
 
     stack = []
     cycle = []
 
-    start = next(iter(g))
+    start = 1
     stack.append(start)
 
     while stack:
-        v= stack[-1]
+        v = stack[-1]
         if g[v]:
-            u = g[v].pop()
+            u = g[v].pop(0)  
             g[u].remove(v)
             stack.append(u)
         else:
