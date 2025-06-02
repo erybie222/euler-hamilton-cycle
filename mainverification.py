@@ -2,7 +2,7 @@ from verification import read_adjacency_matrix
 from euler import find_euler_cycle
 from hamilton import find_hamilton_cycle
 
-graph = read_adjacency_matrix('euler.txt')
+graph = read_adjacency_matrix('test.txt')
 
 euler_cycle = find_euler_cycle(graph)
 
